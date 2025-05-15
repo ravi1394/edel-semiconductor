@@ -1,0 +1,109 @@
+/* Fullscreen section */
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slide wrapper */
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000; /* fallback in case image fails */
+  transition: background-image 0.5s ease-in-out;
+}
+
+.overlay {
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.overlay button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+.overlay button:hover {
+  background-color: #009acd;
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
+}
+
+/* Slick carousel arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-size: 30px;
+}
+
+/* Dots */
+.slick-dots li button:before {
+  color: white;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00bfff;
+  font-size: 14px;
+}
+
+/* First slide background */
+.slick-slide[data-index="0"] .slide {
+  background-image: url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0") !important;
+}
+
+/* Second slide background */
+.slick-slide[data-index="1"] .slide {
+  background-image: url("https://images.unsplash.com/photo-1592659762303-90081d34b277?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.1.0") !important;
+}
+
+/* Third slide background */
+.slick-slide[data-index="2"] .slide {
+  background-image: url("https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0") !important;
+}
+
+/* Apply consistent styling to visible slides */
+.slick-slide.slick-active .slide {
+  display: flex !important;
+  width: 100% !important;
+  height: 100vh !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
